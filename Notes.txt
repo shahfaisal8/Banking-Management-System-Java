@@ -1,0 +1,84 @@
+boolean mainLoop = true;
+        while(mainLoop) {
+            System.out.print("Enter Account Number: ");
+            int num = sc.nextInt();
+            System.out.print("Enter Your PIN: ");
+            String pin = sc.next();
+
+            if(num == 1001 && pin.equals("1234")) {
+                boolean sessionActive = true; 
+                
+               
+                while(sessionActive) {
+                    System.out.println("\n1. View Balance\n2. Withdraw \n3. Deposit \n4. Logout/Exit");
+                    int ch = sc.nextInt();
+                    
+                    switch(ch) {
+                        case 1:
+                            a1.showBalance();
+                            break;
+                        case 2:
+                            System.out.print("Enter amount: ");
+                            a1.withdraw(sc.nextDouble());
+                            break;
+                        case 3:
+                            System.out.print("Enter amount: ");
+                            a1.deposit(sc.nextDouble());
+                            break;
+                        case 4:
+                            sessionActive = false; 
+                            mainLoop = false;      
+                            System.out.println("Thank you!");
+                            break;
+                        default:
+                            System.out.println("Invalid Option");
+                    }
+                }
+            } else {
+                System.out.println("Invalid Credentials. Try again.");
+            }
+        }
+        sc.close();
+    }
+	
+	
+	
+
+import java.util.LinkedList;
+
+class LL{
+    
+     Node Head;
+    Node Tail;
+    
+    
+    private class Node{
+         int value;
+         Node next;
+        
+        Node(int value){
+            this.value = value;
+        }
+        
+        Node(int value,Node next){
+            this.value = value;
+            this.next = next;
+        }
+    }
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+	
+	
+	Node node1 = new Node(20);
+	Node node2 = new Node(80);
+	
+	
+	
+	
+	
+	
+	}
+}
